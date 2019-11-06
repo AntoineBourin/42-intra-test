@@ -1,0 +1,14 @@
+version: '2.2'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - ./intra-test:/app
+    tty: true
